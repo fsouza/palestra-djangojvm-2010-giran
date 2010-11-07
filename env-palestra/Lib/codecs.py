@@ -1,1 +1,0 @@
-/home/francisco/jython/Lib/codecs.py

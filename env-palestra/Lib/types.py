@@ -1,1 +1,0 @@
-/home/francisco/jython/Lib/types.py
