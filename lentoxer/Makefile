@@ -9,7 +9,7 @@ run:
 	@$(classpath_command) jython manage.py runserver
 
 war:
-	@$(classpath_command) jython manage.py war
+	@$(classpath_command) jython manage.py war --include-java-libs=`pwd`/lib/mysql-connector-java-5.1.13-bin.jar
 
 sql:
 	@echo 'Gerando SQL, aguarde...'
