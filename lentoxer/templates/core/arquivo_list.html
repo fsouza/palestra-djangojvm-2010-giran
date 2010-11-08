@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+    Listando arquivos
+{% endblock %}
+
+{% block body %}
+    {% for arquivo in object_list %}
+        <a href="{{ MEDIA_URL }}{{ arquivo.arquivo }}">{{ arquivo.arquivo }}</a>
+    {% endfor %}
+{% endblock %}
