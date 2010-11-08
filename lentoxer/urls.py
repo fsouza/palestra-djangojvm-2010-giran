@@ -1,6 +1,5 @@
 from django.conf.urls.defaults import *
-from django.views.generic.create_update import create_object
-from django.views.generic.list_detail import object_list
+from django.conf import settings
 from core.models import Arquivo
 
 # Uncomment the next two lines to enable the admin:
@@ -17,6 +16,7 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # (r'^admin/', include(admin.site.urls)),
-    (r'^$', create_object, { 'model' : Arquivo, 'post_save_redirect' : '/arquivos/' }),
-    (r'^arquivos', object_list, { 'queryset' : Arquivo.objects.all() }),
+    (r'^$', 'django.views.generic.create_update.create_object', { 'model' : Arquivo, 'post_save_redirect' : '/arquivos/' }),
+    (r'^arquivos', 'django.views.generic.list_detail.object_list', { 'queryset' : Arquivo.objects.all() }),
+    (r'^media/(.*)$', 'django.views.static.serve', { 'document_root' : settings.MEDIA_ROOT }),
 )
