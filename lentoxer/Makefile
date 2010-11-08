@@ -5,7 +5,7 @@ all: clean war
 syncdb:
 	@$(classpath_command) jython manage.py syncdb
 
-runserver:
+run:
 	@$(classpath_command) jython manage.py runserver
 
 war:
