@@ -5,7 +5,12 @@
 {% endblock %}
 
 {% block body %}
+    <h1 id="">Listagem de arquivos</h1>
+    <ul>
     {% for arquivo in object_list %}
-        <a href="{{ MEDIA_URL }}{{ arquivo.arquivo }}">{{ arquivo.arquivo }}</a>
+        <li><a href="{{ MEDIA_URL }}{{ arquivo.arquivo }}">{{ arquivo.arquivo }}</a></li>
     {% endfor %}
-{% endblock %}
+    </ul>
+
+    <p><a href="{% url novo_arquivo %}">Novo arquivo</a>
+</p>{% endblock %}
