@@ -2,4 +2,5 @@
 *.class
 *.pyc
 *.war
+*.sql
 lentoxer/media

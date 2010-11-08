@@ -11,6 +11,11 @@ run:
 war:
 	@$(classpath_command) jython manage.py war
 
+sql:
+	@echo 'Gerando SQL, aguarde...'
+	@$(classpath_command) jython manage.py sql core auth contenttypes sessions sites > dump.sql
+	@echo 'Feito, verifique o arquivo dump.sql'
+
 clean:
 	@find . -name "*.class" -exec rm -f {} \;
 	@echo 'Done.'
