@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+Novo arquivo!
+{% endblock %}
+
+{% block body %}
+<form action="" method="post" accept-charset="utf-8">
+    {{ form.as_p }}
+    <p><input type="submit" value="Continue &rarr;"/></p>
+</form>
+{% endblock %}
