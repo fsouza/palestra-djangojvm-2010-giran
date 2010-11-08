@@ -1,2 +1,2 @@
-django
+django==1.1.2
 django-jython
