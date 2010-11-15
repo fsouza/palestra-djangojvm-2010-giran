@@ -1,4 +1,4 @@
-classpath_command=CLASSPATH=$CLASSPATH:`pwd`/lib/mysql-connector-java-5.1.13-bin.jar
+classpath_command=CLASSPATH=`pwd`/lib/mysql-connector-java-5.1.13-bin.jar
 
 all: clean war
 
