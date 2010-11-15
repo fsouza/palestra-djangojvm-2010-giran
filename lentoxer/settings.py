@@ -3,7 +3,9 @@
 import os
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 if 'WEB-INF' in PROJECT_ROOT:
-    PROJECT_ROOT = PROJECT_ROOT[0:PROJECT_ROOT.find('WEB-INF')]
+    CONTEXT_ROOT = PROJECT_ROOT[0:PROJECT_ROOT.find('WEB-INF')]
+else:
+    CONTEXT_ROOT = PROJECT_ROOT
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -42,7 +44,7 @@ USE_I18N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
+MEDIA_ROOT = os.path.join(CONTEXT_ROOT, 'media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
