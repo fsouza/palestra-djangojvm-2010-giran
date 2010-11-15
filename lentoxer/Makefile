@@ -11,6 +11,9 @@ run:
 war:
 	@$(classpath_command) jython manage.py war --include-java-libs=`pwd`/lib/mysql-connector-java-5.1.13-bin.jar --verbosity=2
 
+shell:
+	@$(classpath_command) jython manage.py shell
+
 sql:
 	@echo 'Gerando SQL, aguarde...'
 	@$(classpath_command) jython manage.py sql core auth contenttypes sessions sites > dump.sql
