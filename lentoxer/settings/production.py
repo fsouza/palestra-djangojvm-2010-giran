@@ -1,9 +1,0 @@
-from settings.development import *
-
-SETTINGS_ROOT = PROJECT_ROOT
-if 'WEB-INF' in SETTINGS_ROOT:
-    PROJECT_ROOT = SETTINGS_ROOT[0:SETTINGS_ROOT.find('WEB-INF')]
-else:
-    PROJECT_ROOT = SETTINGS_ROOT
-
-MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')

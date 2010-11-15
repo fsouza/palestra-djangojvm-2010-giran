@@ -2,7 +2,8 @@
 
 import os
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-PROJECT_ROOT = PROJECT_ROOT.replace('/settings', '')
+if 'WEB-INF' in PROJECT_ROOT:
+    PROJECT_ROOT = PROJECT_ROOT[0:PROJECT_ROOT.find('WEB-INF')]
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
