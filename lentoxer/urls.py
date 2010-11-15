@@ -16,7 +16,7 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # (r'^admin/', include(admin.site.urls)),
-    url(r'^$', 'django.views.generic.create_update.create_object', { 'model' : Arquivo, 'post_save_redirect' : '/arquivos/' }, name = 'novo_arquivo'),
+    url(r'^$', 'core.views.criar_arquivo', name = 'novo_arquivo'),
     url(r'^arquivos', 'django.views.generic.list_detail.object_list', { 'queryset' : Arquivo.objects.all() }, name = 'listar_arquivos'),
     (r'^media/(.*)$', 'django.views.static.serve', { 'document_root' : settings.MEDIA_ROOT }),
 )
