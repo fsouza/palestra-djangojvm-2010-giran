@@ -1,2 +1,2 @@
-django==1.1.2
-django-jython
+django
+-e svn+http://django-jython.googlecode.com/svn/trunk#egg=django-python
