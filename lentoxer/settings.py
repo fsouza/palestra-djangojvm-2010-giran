@@ -16,12 +16,16 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASE_ENGINE = 'doj.backends.zxjdbc.mysql'
-DATABASE_NAME = 'lentoxer'
-DATABASE_USER = 'lento'
-DATABASE_PASSWORD = 'xer'
-DATABASE_HOST = 'localhost'
-DATABASE_PORT = '3306'
+DATABASES = {
+    'default': {
+        'ENGINE': 'doj.backends.zxjdbc.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'lentoxer',                      # Or path to database file if using sqlite3.
+        'USER': 'lento',                      # Not used with sqlite3.
+        'PASSWORD': 'xer',                  # Not used with sqlite3.
+        'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': '3306',                      # Set to empty string for default. Not used with sqlite3.
+    }
+}
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
